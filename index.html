@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Secret Love File ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;600&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fff0f3;
+            font-family: 'Montserrat', sans-serif;
+            color: #590d22;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(255, 175, 190, 0.4), rgba(255, 175, 190, 0.4));
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        /* Photo Gallery - Polaroids */
+        .gallery {
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+            background: white;
+        }
+
+        .polaroid {
+            background: white;
+            padding: 15px 15px 40px 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            width: 85%;
+            max-width: 320px;
+            transition: transform 0.3s;
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .polaroid p {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.4rem;
+            margin: 15px 0 0 0;
+            text-align: center;
+        }
+
+        /* Rotation for that "scattered" look */
+        .polaroid:nth-child(odd) { transform: rotate(-3deg); }
+        .polaroid:nth-child(even) { transform: rotate(3deg); }
+
+        /* Teasing Section */
+        .teasing-thoughts {
+            padding: 50px 25px;
+            background-color: #ffb3c1;
+            line-height: 1.6;
+        }
+
+        .thought-card {
+            background: rgba(255, 255, 255, 0.7);
+            margin: 15px 0;
+            padding: 15px;
+            border-left: 5px solid #c9184a;
+            border-radius: 5px;
+            font-size: 0.95rem;
+        }
+
+        .notorious-footer {
+            background: #c9184a;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .btn {
+            background: white;
+            color: #c9184a;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>To My Favorite Headache...</h1>
+        <p>You probably thought I'd forget. <br>Scroll down if you dare. 😉</p>
+        <div style="font-size: 2rem; margin-top: 20px; animation: bounce 2s infinite;">↓</div>
+    </header>
+
+    <section class="gallery">
+        <div class="polaroid">
+            <img src="photo1.jpg" alt="Our Memory">
+            <p>The best sunset view...</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="photo2.jpg" alt="Our Memory">
+            <p>Clumsy but the cutest../</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="photo3.jpg" alt="Our Memory">
+            <p>Proof that I'm the lucky one.</p>
+        </div>
+    </section>
+
+    <!-- <section class="teasing-thoughts">
+        <h2 style="font-family: 'Dancing Script'; font-size: 2.2rem; text-align: center;">Confessions...</h2>
+        
+        <div class="thought-card">
+            "I love you even when you're being incredibly dramatic about things that don't matter."
+        </div>
+        
+        <div class="thought-card">
+            "I'm 100% sure you only date me for my hoodies and my Spotify playlists. It's okay, I've accepted my fate."
+        </div>
+
+        <div class="thought-card">
+            "I still have that photo of you sleeping with your mouth open. It's my leverage in case we ever argue."
+        </div>
+    </section> -->
+
+
+<section class="teasing-thoughts">
+        <h2 style="font-family: 'Dancing Script'; font-size: 2.2rem; text-align: center;">Strategic Leverage 📂</h2>
+        
+        <div class="thought-card">
+            "I love you even when you're being incredibly dramatic about things that don't matter."
+        </div>
+
+        <div class="thought-card" style="text-align: center; border-left: none; background: #ffe5ec;">
+            <p><strong>TOP SECRET:</strong> "I still have that photo of you sleeping with your mouth open. It's my leverage in case we ever argue."</p>
+            
+            <div id="blackmail-container" style="position: relative; width: 100%; max-width: 250px; margin: 20px auto; cursor: pointer;" onclick="revealPhoto()">
+                <img id="secret-photo" src="mouth-open.jpg" style="width: 100%; border-radius: 10px; filter: blur(20px); transition: 0.5s;">
+                
+                <div id="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); color: white; display: flex; align-items: center; justify-content: center; border-radius: 10px; font-weight: bold; font-size: 0.8rem; padding: 10px; text-align: center;">
+                    ⚠️ CLASSIFIED ⚠️<br>Click to reveal evidence
+                </div>
+            </div>
+            
+            <p id="photo-caption" style="font-style: italic; font-size: 0.85rem; margin-top: 10px; color: #c9184a;">
+                (Yes, your mouth was actually that wide open. You looked like you were catching flies.)
+            </p>
+        </div>
+
+        <div class="thought-card">
+            "You have a 100% success rate in starting fights over absolutely nothing (like why I breathed too loud or why my "tone" was 2% off). 🙄"
+        </div>
+    </section>
+
+
+<section class="gallery" style="background-color: #fff0f3; padding-top: 0;">
+        <h2 style="font-family: 'Dancing Script'; font-size: 2.5rem; margin-top: 40px;">Some of my favorite moments...</h2>
+
+        <div class="polaroid">
+            <img src="together1.jpg" alt="Us">
+            <p>My favorite place in the world is right next to you.</p>
+        </div>
+
+        <div class="polaroid" style="border: 2px solid #ff4d6d;">
+            <img src="solo1.jpg" alt="Her">
+            <p style="color: #c9184a;">The reason I'm so distracted all the time. 😍</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="together2.jpg" alt="Us">
+            <p>Every day with you is my new favorite day.</p>
+        </div>
+
+        <div class="polaroid" style="border: 2px solid #ff4d6d;">
+            <img src="solo2.jpg" alt="Her">
+            <p style="color: #c9184a;">Still the most beautiful girl in every room.</p>
+        </div>
+    </section>
+
+    <section class="teasing-thoughts" style="background-color: #ff85a1; color: white;">
+        <div class="thought-card" style="border-left-color: #590d22; background: #fffcfc; color: #590d22;">
+            <p><strong>To the girl who loves starting fights:</strong></p>
+            <p>I know you love to pick battles  Well, spoiler alert: I'm not going anywhere. Even when you're at your "fight-starting" peak, I still want every single version of you. ❤️</p>
+        </div>
+    </section>
+
+
+
+
+    <script>
+        function revealPhoto() {
+            const photo = document.getElementById('secret-photo');
+            const overlay = document.getElementById('overlay');
+            const caption = document.getElementById('photo-caption');
+            
+            photo.style.filter = 'none';
+            overlay.style.display = 'none';
+            caption.innerHTML = "Absolute masterpiece. 10/10 sleeping form. 😂❤️";
+        }
+    </script>
+
+
+
+
+    <!-- <section class="notorious-footer">
+        <h2>Contractual Obligation</h2>
+        <p>By clicking below, you agree to be my Valentine and promise not to steal my fries for at least 24 hours.</p>
+        
+        <a href="https://wa.me/YOUR_PHONE_NUMBER?text=I+accept+the+terms+and+conditions!+❤️" class="btn">I ACCEPT (No Refunds)</a>
+        
+        <p style="margin-top: 40px; font-size: 0.8rem; opacity: 0.8;">
+            © 2026 Your Favorite DevOps Engineer. All Rights Reserved. <br>
+            Uptime: 100% (When you aren't mad at me).
+        </p>
+    </section> -->
+
+
+<section class="notorious-footer">
+        <h2>Contractual Obligation</h2>
+        <p>By clicking below, you agree to be my Valentine and promise not to steal my fries for at least 24 hours.</p>
+        
+        <button onclick="showFinalLoveNote()" class="btn" style="border: none; cursor: pointer;">I ACCEPT (No Refunds)</button>
+        
+        <p style="margin-top: 40px; font-size: 0.8rem; opacity: 0.8;">
+            © 2026 Your Favorite Penguin. All Rights Reserved. <br>
+            Uptime: 100% (When you aren't mad at me).
+        </p>
+    </section>
+
+    <div id="loveNoteOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: #c9184a; z-index:9999; justify-content:center; align-items:center; padding: 20px; box-sizing: border-box;">
+        <div id="loveContent" style="text-align:center; color:white; max-width: 500px;">
+            <h2 style="font-family: 'Dancing Script', cursive; font-size: 3rem; margin-bottom: 20px;">I Love You The Most! ❤️</h2>
+            
+            <p style="font-size: 1.2rem; line-height: 1.6; font-style: italic; margin-bottom: 30px;">
+                "I would rather share one lifetime with you than face all the ages of this world alone."
+            </p>
+
+            <h3 style="font-family: 'Dancing Script', cursive; font-size: 2.2rem;">Happy Valentine's Day, Gunnu Baby!</h3>
+
+            <!-- <a href="https://wa.me/?text=I+love+you+too+mostest!+❤️" 
+               style="color: #ffb3c1; font-size: 1rem; text-decoration: underline; display: block; margin-top: 40px; font-family: 'Montserrat';">
+               Now come tell me in person!
+            </a> -->
+        </div>
+    </div>
+
+
+
+
+<!-- <section class="notorious-footer">
+        <h2>Contractual Obligation</h2>
+        <p>By clicking below, you agree to be my Valentine and promise not to steal my fries for at least 24 hours.</p>
+        
+        <button onclick="playOurVideo()" class="btn" style="border: none; cursor: pointer;">I ACCEPT (No Refunds)</button>
+        
+        <p style="margin-top: 40px; font-size: 0.8rem; opacity: 0.8;">
+            © 2026 Your Favorite DevOps Engineer. All Rights Reserved. <br>
+            Uptime: 100% (When you aren't mad at me).
+        </p>
+    </section> -->
+
+    <div id="videoOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:black; z-index:9999; justify-content:center; align-items:center;">
+        <video id="valentineVideo" style="width:100%; max-height:100vh;">
+            <source src="our-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div id="finalMessage" style="display:none; position:absolute; color:white; text-align:center; font-family: 'Dancing Script', cursive; font-size: 2.5rem; padding: 20px;">
+            Happy Valentine's Day, <br>Gunnu Baby! ❤️
+            <br>
+            <a href="https://wa.me/YOUR_PHONE_NUMBER?text=I+accepted+the+terms!+Come+give+me+a+kiss!+❤️" 
+               style="color: #ffb3c1; font-size: 1rem; text-decoration: none; display: block; margin-top: 20px; font-family: 'Montserrat';">
+               Click here to tell me you saw this!
+            </a>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        // Simple bounce animation for the arrow
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes bounce {
+                0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+                40% {transform: translateY(-10px);}
+                60% {transform: translateY(-5px);}
+            }
+        `;
+        document.head.appendChild(style);
+
+
+    function showFinalLoveNote() {
+        const overlay = document.getElementById('loveNoteOverlay');
+        const content = document.getElementById('loveContent');
+
+        // Show the overlay
+        overlay.style.display = 'flex';
+        
+        // Add a smooth fade-in effect
+        content.style.opacity = 0;
+        content.style.transform = 'translateY(20px)';
+        content.style.transition = 'all 1s ease-out';
+        
+        setTimeout(() => {
+            content.style.opacity = 1;
+            content.style.transform = 'translateY(0)';
+        }, 100);
+    }
+
+    // Keep your existing revealPhoto function here too
+    function revealPhoto() {
+        const photo = document.getElementById('secret-photo');
+        const overlay = document.getElementById('overlay');
+        const caption = document.getElementById('photo-caption');
+        
+        photo.style.filter = 'none';
+        overlay.style.display = 'none';
+        caption.innerHTML = "Absolute masterpiece. 10/10 sleeping form. 😂❤️";
+    }
+    </script>
+    
+
+
+
+    
+</body>
+</html>
